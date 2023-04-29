@@ -12,7 +12,8 @@ body {
     margin: 0;
     overflow-x: hidden;
     background: #868f96;
-    background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+    background: rgb(134,143,150);
+    background: linear-gradient(90deg, rgba(134,143,150,1) 30%, rgba(89,97,100,1) 79%);
 }
 
 .homeicon {
