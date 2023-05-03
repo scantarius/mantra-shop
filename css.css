@@ -7,39 +7,36 @@
 }
   
 body {
-    min-height: 450px;
-    height: 100vh;
     margin: 0;
-    overflow-x: hidden;
     background: #868f96;
-    background: rgb(134,143,150);
-    background: linear-gradient(90deg, rgba(134,143,150,1) 30%, rgba(89,97,100,1) 79%);
 }
 
-.homeicon {
-    top: 80px;
+.logo {
+    width: 800px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 #finishPopup {
     position: fixed;
-    border-radius: 20px;
+    border-radius: 10px;
     color: black;
     font-family: "Montserrat", sans-serif;
-    text-overflow: hidden;
-    top: 70%;
-    left: 86%;
-    transform: translate(-50%, -50%);
+    top: 0%;
+    right: 0%;
     visibility: hidden;
-    padding: 20px;
-    margin-top: 40px;
 }
 
 .content {
-    width: 400px;
-    height: 350px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: #7d7c7e;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 .inpt {
@@ -49,23 +46,6 @@ body {
 .content button {
     margin-top: 5px;
     padding: 10px;
-}
-
-.filter a {
-    list-style: none;
-    cursor: pointer;
-}
-
-.filtericon, .p {
-    vertical-align: middle;
-    display: inline-block;
-}
-
-.filtericon, .moneyfiltericon, .moneyfiltericon2 {
-    vertical-align: middle;
-    display: inline-block;
-    margin: 15px;
-    margin-top: 15px;
 }
 
 .discount {
@@ -79,13 +59,9 @@ body {
     font-size: 20px;
 }
 
-.searchbar, .filter {
+.searchbar {
     margin-top: 30px;
     margin: 20px;
-}
-
-#moneyup, #moneydown {
-    margin-top: 20px;
 }
 
 button {
@@ -162,7 +138,6 @@ button:hover {
     text-decoration: none;
 }
 
-  
 .dropdown button {
     background: none;
     text-decoration: none;
@@ -182,18 +157,24 @@ button:hover {
     pointer-events: fill;
 }
 
-#container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+#containername {
+    display: flex;
+    justify-content: flex-start;
     font-family: "Montserrat", sans-serif;
-    margin: 40px;
-    margin-left: 10px;
+}
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-family: "Montserrat", sans-serif;
 }
 
 #container img {
     width: 350px;
     height: 500px;
     border: solid #000;
+    border-radius: 30px;
     margin-left: 10px;
 }
 
