@@ -83,6 +83,7 @@ function firstLoad(watches){
   if(watches == null)
     return;
 
+  document.getElementById("containername").innerHTML = "";
   var deleteAll = document.getElementById("container");
   deleteAll.innerHTML = "<div class= " + "item" + ">" +
                         "<img src= " + watches.vacheron.pic + ">" +
@@ -179,9 +180,6 @@ function firstLoad(watches){
                         "<p class= " + "leftNorth" + ">Left: 2</p>" +
                         "<button class= " + "buyNorth " + "onclick= " + "addNorth()" + ">ADD TO BASKET</button>" +
                         "</div>";
-
-  deleteAll.style.display = "grid";
-  deleteAll.style.gridTemplateColumns = "auto auto auto auto";          
 }
 
 //Brand buttons
@@ -189,15 +187,16 @@ function showOmega(watches){
   removeDSF()
   if(watches == null)
     return;
-  var omega = document.getElementById("container");
-  omega.innerHTML =   "<div class= " + "title" + ">" +
-                      "<h2 style= " + "text-align:center>" + "Sorted by Omega</h2>" +
-                      "<hr style= " + "height:1px;width:80%;background-color:greenyellow" + ">" +
-                      "<h3>4 Results</h3>" +
-                      "</div>" +
 
-                      "<section id= " + "container-omega" + ">" +
-                      "<div>" +
+  var omegaTitle = document.getElementById("containername");
+  omegaTitle.innerHTML = "<div class= " + "title" + ">" +
+                          "<h2 style= " + "margin-top:20px>" + "Sorted by Omega</h2>" +
+                          "<hr style= " + "height:1px;width:10%;background-color:greenyellow;margin-left:10px" + ">" +
+                          "<h2 style= " + "margin-top:20px>" + "4 Result</h2>" +
+                          "</div>" ;
+
+  var omega = document.getElementById("container");
+  omega.innerHTML =   "<div>" +
                       "<img src= " + watches.aquaterra.pic + ">" +
                       "<h3>" + watches.aquaterra.name + "</h3>" +
                       "<p class= " + "priceAquaterra>" + watches.aquaterra.price + "</p>" +
@@ -227,30 +226,23 @@ function showOmega(watches){
                       "<p class= " + "priceRailmaster>" + watches.railmaster.price + "</p>" +
                       "<p class= " + "leftRailmaster" + ">Left: 5</p>" +
                       "<button class= " + "buyRailmaster " + "onclick= " + "addRailmaster()" + ">ADD TO BASKET</button>" +
-                      "</div>" +
-                      "</section>";
-                      
-  var omegaContainer = document.getElementById("container-omega");       
-  omegaContainer.style.display = "grid";
-  omegaContainer.style.gridTemplateColumns = "auto auto auto";
-  omegaContainer.style.columnGap = "100px";
-  omegaContainer.style.rowGap = "50px";
-  omegaContainer.style.width = "60%";
+                      "</div>";
 }
 
 function showTissot(watches){
   removeDSF()
   if(watches == null)
     return;
+
+  var tissotTitle = document.getElementById("containername");
+  tissotTitle.innerHTML = "<div class= " + "title" + ">" +
+                          "<h2 style= " + "margin-top:20px>" + "Sorted by Tissot</h2>" +
+                          "<hr style= " + "height:1px;width:10%;background-color:greenyellow;margin-left:10px" + ">" +
+                          "<h2 style= " + "margin-top:20px>" + "5 Result</h2>" +
+                          "</div>" ;
+
   var tissot = document.getElementById("container");
-  tissot.innerHTML =  "<div class= " + "title" + ">" +
-                      "<h2 style= " + "text-align:center>" + "Sorted by Tissot</h2>" +
-                      "<hr style= " + "height:1px;width:80%;background-color:greenyellow" + ">" +
-                      "<h3>5 Results</h3>" +
-                      "</div>" +
-                      
-                      "<section id= " + "container-tissot" + ">" +
-                      "<div>" +
+  tissot.innerHTML =  "<div>" +
                       "<img src= " + watches.powermatic.pic + ">" +
                       "<h3>" + watches.powermatic.name + "</h3>" +
                       "<p class= " + "pricePowermatic>" + watches.powermatic.price + "</p>" +
@@ -288,31 +280,23 @@ function showTissot(watches){
                       "<p class= " + "priceSupersport>" + watches.supersport.price + "</p>" +
                       "<p class= " + "leftSupersport" + ">Left: 4</p>" +
                       "<button class= " + "buySupersport " + "onclick= " + "addSupersport()" + ">ADD TO BASKET</button>" +
-                      "<div>" +
-                      "</section>";
-
-
-  var tissotContainer = document.getElementById("container-tissot");       
-  tissotContainer.style.display = "grid";
-  tissotContainer.style.gridTemplateColumns = "auto auto auto";
-  tissotContainer.style.columnGap = "100px";
-  tissotContainer.style.rowGap = "50px";
-  tissotContainer.style.width = "60%";
+                      "<div>";
 }
 
 function showTimex(watches){
   removeDSF()
   if(watches == null)
     return;
-  var timex = document.getElementById("container");
-  timex.innerHTML =   "<div class= " + "title" + ">" +
-                      "<h2 style= " + "text-align:center>" + "Sorted by Timex</h2>" +
-                      "<hr style= " + "height:1px;width:80%;background-color:greenyellow" + ">" +
-                      "<h3>2 Results</h3>" +
-                      "</div>" +
+
+  var timexTitle = document.getElementById("containername");
+  timexTitle.innerHTML = "<div class= " + "title" + ">" +
+                            "<h2 style= " + "margin-top:20px>" + "Sorted by Timex</h2>" +
+                            "<hr style= " + "height:1px;width:10%;background-color:greenyellow;margin-left:10px" + ">" +
+                            "<h2 style= " + "margin-top:20px>" + "2 Results</h2>" +
+                            "</div>" ;
   
-                      "<section id= " + "container-timex" + ">" +
-                      "<div>" +
+  var timex = document.getElementById("container");
+  timex.innerHTML =   "<div>" +
                       "<img src= " + watches.north.pic + ">" +
                       "<h3>" + watches.north.name + "</h3>" +
                       "<p class= " + "priceNorth>" + watches.north.price + "</p>" +
@@ -326,43 +310,29 @@ function showTimex(watches){
                       "<p class= " + "priceTraditional>" + watches.traditional.price + "</p>" +
                       "<p class= " + "leftTraditional" + ">Left: 2</p>" +
                       "<button class= " + "buyTraditional " + "onclick= " + "addTraditional()" + ">ADD TO BASKET</button>" +
-                      "</div>" +
-                      "</section>";
-
-  var timexContainer = document.getElementById("container-timex");       
-  timexContainer.style.display = "grid";
-  timexContainer.style.gridTemplateColumns = "auto auto auto";
-  timexContainer.style.columnGap = "100px";
-  timexContainer.style.rowGap = "50px";
-  timexContainer.style.width = "60%";
+                      "</div>";
 }
 
 function showVacheron(watches){
+  removeDSF()
   if(watches == null)
     return;
-  var vacheron = document.getElementById("container");
-  vacheron.innerHTML =  "<div class= " + "title" + ">" +
-                        "<h2 style= " + "text-align:center>" + "Sorted by Vacheron</h2>" +
-                        "<hr style= " + "height:1px;width:80%;background-color:greenyellow" + ">" +
-                        "<h3>1 Result</h3>" +
-                        "</div>" +
 
-                        "<section id= " + "container-vacheron" + ">" +
-                        "<div>" +
+  var vacheronTitle = document.getElementById("containername");
+  vacheronTitle.innerHTML = "<div class= " + "title" + ">" +
+                            "<h2 style= " + "margin-top:20px>" + "Sorted by Vacheron</h2>" +
+                            "<hr style= " + "height:1px;width:10%;background-color:greenyellow;margin-left:10px" + ">" +
+                            "<h2 style= " + "margin-top:20px>" + "1 Result</h2>" +
+                            "</div>" ;
+
+  var vacheron = document.getElementById("container");
+  vacheron.innerHTML =  "<div>" +
                         "<img src= " + watches.vacheron.pic + ">" +
                         "<h3>" + watches.vacheron.name + "</h3>" +
                         "<p class= " + "priceVacheron>" + watches.vacheron.price + "</p>" +
                         "<p class= " + "leftVacheron" + ">Left: 1</p>" +
                         "<button class= " + "buyVacheron " + "onclick= " + "addVacheron()" + ">ADD TO BASKET</button>" +
-                        "</div>" +
-                        "</section>";
-
-  var vacheronContainer = document.getElementById("container-vacheron");       
-  vacheronContainer.style.display = "grid";
-  vacheronContainer.style.gridTemplateColumns = "auto auto auto";
-  vacheronContainer.style.columnGap = "100px";
-  vacheronContainer.style.rowGap = "50px";
-  vacheronContainer.style.width = "60%";
+                        "</div>";
 }
 
 //"Added to basket" popup
